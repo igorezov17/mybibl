@@ -1,0 +1,302 @@
+2017/03/23 21:21:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gil".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gil')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\site\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gil
+---
+2017/03/23 21:22:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gil".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gil')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\site\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gil
+---
+2017/03/23 21:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gil".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gil')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\site\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gil
+---
+2017/03/23 21:30:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "books/view/about".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('books/view/abou...')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\site\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/books/view/about
+HTTP_REFERER=http://my1.local/index.php/page?view=about
+---
+2017/03/23 21:30:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "books/view/about".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('books/view/abou...')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\site\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/books/view/about
+HTTP_REFERER=http://my1.local/index.php/page?view=about
+---
+2017/03/23 21:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "books".' in D:\home\yii-1.1.17\framework\yiilite.php:3776
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3658): CController->missingAction('books')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('books')
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/books')
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#4 D:\home\site\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/books
+HTTP_REFERER=http://my1.local/index.php/page?view=about
+---
+2017/03/23 21:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\home\yii-1.1.17\framework\yiilite.php:3776
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3658): CController->missingAction('login')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('login')
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/login')
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#4 D:\home\site\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/login
+HTTP_REFERER=http://my1.local/index.php/page?view=about
+---
+2017/03/23 21:33:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "books".' in D:\home\yii-1.1.17\framework\yiilite.php:3776
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3658): CController->missingAction('books')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('books')
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/books')
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#4 D:\home\site\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/books
+HTTP_REFERER=http://my1.local/index.php/page?view=about
+---
+2017/03/23 21:37:01 [error] [php] Object of class Books could not be converted to string (D:\home\site\protected\controllers\SiteController.php:59)
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3663): SiteController->runAction()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(3653): SiteController->runActionWithFilters()
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1768): SiteController->run()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController()
+#4 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#5 D:\home\site\index.php(13): CWebApplication->run()
+REQUEST_URI=/books
+in D:\home\site\protected\controllers\SiteController.php (59)
+in D:\home\site\index.php (13)
+2017/03/24 18:14:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('favicon.ico')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\mybibl\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://my1.local/
+---
+2017/04/21 07:48:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in D:\home\yii-1.1.17\framework\yiilite.php:3776
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3658): CController->missingAction('test')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('test')
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/test')
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#4 D:\home\mybibl\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/test
+---
+2017/04/21 07:49:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in D:\home\yii-1.1.17\framework\yiilite.php:3776
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(3658): CController->missingAction('site')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('site')
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/site')
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#4 D:\home\mybibl\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/
+---
+2017/04/21 07:49:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('favicon.ico')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\mybibl\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://my1.local/site/
+---
+2017/04/21 08:00:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(1330): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\yiilite.php(7632): CApplication->getDb()
+#5 D:\home\yii-1.1.17\framework\yiilite.php(8049): CActiveRecord->getDbConnection()
+#6 D:\home\yii-1.1.17\framework\yiilite.php(8067): CActiveRecord->getTableAlias(true)
+#7 D:\home\mybibl\protected\controllers\SiteController.php(59): CActiveRecord->findByPk(1)
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): SiteController->actionBooks()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('books')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('site/books')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/books
+HTTP_REFERER=http://my1.local/
+---
+2017/04/21 08:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('favicon.ico')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\mybibl\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://my1.local/
+---
+2017/04/21 08:05:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "php/index.php".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('php/index.php')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\mybibl\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/php/index.php/
+---
+2017/04/21 08:08:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): CrudCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/crud/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/crud/index
+HTTP_REFERER=http://my1.local/index.php/gii/default/index
+---
+2017/04/21 08:09:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): ModelCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/model/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model/index
+HTTP_REFERER=http://my1.local/index.php/gii/module/index
+---
+2017/04/21 08:09:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): ModelCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/model/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model/index
+HTTP_REFERER=http://my1.local/index.php/gii/module/index
+---
+2017/04/21 08:09:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): ModelCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/model/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model/index
+HTTP_REFERER=http://my1.local/index.php/gii/module/index
+---
+2017/04/21 08:09:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): ModelCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/model/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model/index
+HTTP_REFERER=http://my1.local/index.php/gii/module/index
+---
+2017/04/21 08:09:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+' in D:\home\yii-1.1.17\framework\yiilite.php:8615
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(8587): CDbConnection->open()
+#1 D:\home\yii-1.1.17\framework\yiilite.php(8576): CDbConnection->setActive(true)
+#2 D:\home\yii-1.1.17\framework\yiilite.php(1073): CDbConnection->init()
+#3 D:\home\yii-1.1.17\framework\yiilite.php(925): CModule->getComponent('db')
+#4 D:\home\yii-1.1.17\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 D:\home\yii-1.1.17\framework\web\CFormModel.php(39): CrudCode->init()
+#6 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\home\yii-1.1.17\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\home\yii-1.1.17\framework\yiilite.php(4165): CCodeGenerator->actionIndex()
+#9 D:\home\yii-1.1.17\framework\yiilite.php(3678): CInlineAction->runWithParams(Array)
+#10 D:\home\yii-1.1.17\framework\yiilite.php(3663): CController->runAction(Object(CInlineAction))
+#11 D:\home\yii-1.1.17\framework\yiilite.php(3653): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\home\yii-1.1.17\framework\yiilite.php(1768): CController->run('index')
+#13 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('gii/crud/index')
+#14 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#15 D:\home\mybibl\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/crud/index
+HTTP_REFERER=http://my1.local/index.php/gii/form/index
+---
