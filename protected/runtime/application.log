@@ -300,3 +300,12 @@ Stack trace:
 REQUEST_URI=/index.php/gii/crud/index
 HTTP_REFERER=http://my1.local/index.php/gii/form/index
 ---
+2017/04/22 19:21:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\home\yii-1.1.17\framework\yiilite.php:1772
+Stack trace:
+#0 D:\home\yii-1.1.17\framework\yiilite.php(1688): CWebApplication->runController('favicon.ico')
+#1 D:\home\yii-1.1.17\framework\yiilite.php(1205): CWebApplication->processRequest()
+#2 D:\home\mybibl\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://my1.local/
+---

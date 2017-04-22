@@ -1,5 +1,7 @@
 <?php
 
+echo 1;
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii-1.1.17/framework/yiilite.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
