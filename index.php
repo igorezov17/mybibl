@@ -1,6 +1,9 @@
 <?php
 
-echo 1;
+$a1 =5;
+$a2 =0.5;
+
+echo $a1 + $a2;
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii-1.1.17/framework/yiilite.php';
