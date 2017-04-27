@@ -1,51 +1,68 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="en">
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
+	<header>
+		<div class="container">
+			<h1>Общая библиотека</h1>
+			<nav>
+				<a href="">Домой</a>
+				<a href="">Архив</a>
+				<a href="">Клиенты</a>
+				<a href="">Информация</a>
+				<a href="">Контакты</a>
+				<a href="">Корзина</a>
+				<div class="search">
+					<form>
+						<input type="text" name="name" placeholder="Название книги">
+						<input type="submit" value="Найти">
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<section class="login-nav">
+		<div class="container">
+			<div class="space"></div>
+			<form>
+				<a href="">Регистрация</a>
+				<input type="text" name="name" placeholder="Введи логин">
+				<input type="password" name="pswrd" placeholder="Введи пароль">
+				<input type="submit" id="submit" value="Войти">
+			</form>
+		</div>
+	</section>
 
-<div class="container" id="page">
+	<section>
+		<div class="container">
+			<?php echo $content; ?>
+		</div>
+	</section>
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<a href="/books">Books</a>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
-
+	<footer>
+		<div class="container">
+			<div>
+				<span>Адрес</span>
+				<p>п. Монино ул. Хорошовская д. 7</p>
+			</div>
+			<div>
+				<span>Контакты</span>
+				<p>8-495-765-23-12</p>
+				<p>8-495-785-77-53</p>
+			</div>
+			<div>
+				<span>Соц. сети</span>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

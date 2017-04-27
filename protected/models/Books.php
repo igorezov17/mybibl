@@ -4,9 +4,9 @@
  * This is the model class for table "books".
  *
  * The followings are the available columns in table 'books':
- * @property string $id
- * @property string $name
- * @property string $user_id
+ * @property integer $id
+ * @property string $label
+ * @property string $author
  */
 class Books extends CActiveRecord
 {
@@ -26,11 +26,11 @@ class Books extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'length', 'max'=>80),
-			array('user_id', 'length', 'max'=>10),
+			array('label, author', 'required'),
+			array('label, author', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, user_id', 'safe', 'on'=>'search'),
+			array('id, label, author', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,8 +52,8 @@ class Books extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'user_id' => 'User',
+			'label' => 'Label',
+			'author' => 'Author',
 		);
 	}
 
@@ -75,9 +75,9 @@ class Books extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('user_id',$this->user_id,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('label',$this->label,true);
+		$criteria->compare('author',$this->author,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

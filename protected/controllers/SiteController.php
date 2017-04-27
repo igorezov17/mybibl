@@ -50,8 +50,8 @@ class SiteController extends Controller
 	
 	public function actionIndex()
 	{
-		
-		$this->render('index');
+		$books = Books::model()->findAll();
+		$this->render('index', array('books' => $books));
 	}
 	
 	public function actionBooks()

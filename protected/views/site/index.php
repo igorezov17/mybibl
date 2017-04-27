@@ -1,7 +1,18 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<div class="title">Новинки</div>
+<div class="card-box">
+    <?php foreach ($books as $book) { ?>
+    <div class="card">
+        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/book.png" alt="">
+        <span class="name">
+            <span class="label"><?php echo $book->label; ?></span>
+            <span class="author"><?php echo $book->author; ?></span>
+        </span>
+        <div class="space"></div>
+        <a href="">Подробниие</a>
+    </div>
+    <?php } ?>
+</div>
