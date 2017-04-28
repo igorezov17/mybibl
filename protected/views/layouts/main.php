@@ -32,13 +32,9 @@
 	</header>
 	<section class="login-nav">
 		<div class="container">
-			<div class="space"></div>
-			<form>
-				<a href="">Регистрация</a>
-				<input type="text" name="name" placeholder="Введи логин">
-				<input type="password" name="pswrd" placeholder="Введи пароль">
-				<input type="submit" id="submit" value="Войти">
-			</form>
+			<a href="">Регистрация</a>
+			<a href="">Вход</a>
+			</div>
 		</div>
 	</section>
 

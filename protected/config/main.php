@@ -39,7 +39,12 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => true,
 			'rules'=>array(
+				'gii' => 'gii',
+				'gii/<_c:\w+>' => 'gii/<_c>',
+				'gii/<_c:\w+>/<_a:\w+>' => 'gii/<_c>/<_a>',
+
 				'<action:\w+>'=>'site/<action>',
 				//'controller:\w+>/<id:\d+>'=>'<controller>/view',
 				//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

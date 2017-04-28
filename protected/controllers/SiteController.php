@@ -20,10 +20,7 @@ class SiteController extends Controller
 			),
 		);
 	}
-	
-	/**
-	 * This is the action to handle external exceptions.
-	 */
+
 	public function actionError()
 	{
 		if($error=Yii::app()->errorHandler->error)
@@ -43,15 +40,75 @@ class SiteController extends Controller
 	
 	
 	
+	public function actionLogin()
+	{
+		$model=new LoginForm;
+		if(isset($_POST['LoginForm']))
+		{
+			// получаем данные от пользователя
+			$model->attributes=$_POST['LoginForm'];
+			// проверяем полученные данные и, если результат проверки положительный,
+			// перенаправляем пользователя на предыдущую страницу
+			if($model->validate())
+				$this->redirect(Yii::app()->user->returnUrl);
+		}
+		// рендерим представление
+		$this->render('login',array('model'=>$model));
+	}
 	
 	
+	public function actionRegister()
+	{
+		$model = new RegisterForm;
+
+		if (isset($_POST['RegisterForm']))
+		{
+			$model->attributes = $_POST['RegisterForm'];
+
+			if ($model->validate()) {
+				$user = new Users;
+				$user->email = $model->email;
+				$user->public_key = md5($model->email+'+'+$model->password);
+				$user->save();
+
+				$this->redirect(Yii::app()->user->returnUrl);
+			}
+		}
+
+		$this->render('register', array('model' => $model));
+	}
 	
-	
-	
+	protected function beforeAction() {
+		$login = new LoginForm;
+
+		if (isset($_POST['LoginForm']))
+		{
+			$login->attributes = $_POST['LoginForm'];
+			if ($login->validate()) {
+				$identity = new UserIdentity($login->email, $login->password);
+
+				if ($identity->authenticate()) {
+					Yii::app()->user->login($identity);
+				}
+			}
+		}
+
+		return true;
+	}
+
 	public function actionIndex()
 	{
+		$ret = array();
+
+		if (Yii::app()->user->isGuest) {
+			$login = new LoginForm;
+			$ret['login'] = $login;
+		}
+
 		$books = Books::model()->findAll();
-		$this->render('index', array('books' => $books));
+		$ret['books'] = $books;
+
+		$this->render('index', $ret);
 	}
 	
 	public function actionBooks()
