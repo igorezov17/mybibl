@@ -79,7 +79,23 @@ header nav .search form input[type=submit]:hover {
 .login-nav {
   background-color: #e0e0e0;
 }
+.login-nav .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.login-nav .container .space {
+  -ms-flex: 1;
+      flex: 1;
+}
+.login-nav .container span {
+  padding: 0 6px;
+}
 .login-nav .container form {
+  margin-left: 6px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -100,14 +116,14 @@ header nav .search form input[type=submit]:hover {
   background-color: #bdbdbd;
   cursor: pointer;
 }
-.login-nav .container form a {
+.login-nav .container a {
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px;
   display: inline-block;
   color: #212121;
 }
-.login-nav .container form a:hover {
+.login-nav .container a:hover {
   background-color: #bdbdbd;
 }
 .title {

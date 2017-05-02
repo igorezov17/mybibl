@@ -77,19 +77,23 @@ class SiteController extends Controller
 
 		$this->render('register', array('model' => $model));
 	}
+
+	protected $loginModel = null;
 	
 	protected function beforeAction() {
-		$login = new LoginForm;
+		$this->loginModel = new LoginForm;
 
 		if (isset($_POST['LoginForm']))
 		{
-			$login->attributes = $_POST['LoginForm'];
-			if ($login->validate()) {
-				$identity = new UserIdentity($login->email, $login->password);
+			$this->loginModel->attributes = $_POST['LoginForm'];
 
-				if ($identity->authenticate()) {
-					Yii::app()->user->login($identity);
+			if ($this->loginModel->validate()) {
+				$ide = $this->loginModel->getIde();
+				if (!Yii::app()->user->login($ide, 3600*24*7)) {
+					var_dump($ide);
 				}
+			} else {
+				$this->actionError();
 			}
 		}
 

@@ -20,7 +20,6 @@
 				<a href="">Клиенты</a>
 				<a href="">Информация</a>
 				<a href="">Контакты</a>
-				<a href="">Корзина</a>
 				<div class="search">
 					<form>
 						<input type="text" name="name" placeholder="Название книги">
@@ -32,9 +31,21 @@
 	</header>
 	<section class="login-nav">
 		<div class="container">
-			<a href="">Регистрация</a>
-			<a href="">Вход</a>
-			</div>
+			<?php if (Yii::app()->user->isGuest): ?>
+				<a href="">Регистрация</a>
+			<?php else: ?>
+				<a href="">Корзина</a>
+				<div class="space"></div>
+				<span><?php echo Yii::app()->user->name; ?></span>
+				<a href="">Выход</a>
+			<?php endif ?>
+			<?php if (Yii::app()->user->isGuest): ?>
+				<?php $form = $this->beginWidget('CActiveForm'); ?>
+					<?php echo $form->emailField($this->loginModel, 'email') ?>
+					<?php echo $form->passwordField($this->loginModel, 'password') ?>
+					<?php echo CHtml::submitButton('Войти'); ?>
+				<?php $this->endWidget(); ?>
+			<?php endif ?>
 		</div>
 	</section>
 

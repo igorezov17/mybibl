@@ -5,7 +5,7 @@ class LoginForm extends CFormModel
     public $email;
     public $password;
  
-    private $_identity;
+    private $_identity = null;
  
     public function rules()
     {
@@ -18,7 +18,13 @@ class LoginForm extends CFormModel
     public function authenticate($attribute, $params)
     {
         $this->_identity = new UserIdentity($this->email, $this->password);
-        if (!$this->_identity->authenticate())
+
+        if (!$this->_identity->authenticate()) {
             $this->addError('password','Неправильное имя пользователя или пароль.');
+        }
+    }
+
+    public function getIde() {
+        return $this->_identity;
     }
 }

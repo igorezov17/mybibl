@@ -3,19 +3,23 @@
 class UserIdentity extends CUserIdentity
 {
 	private $_id;
+	private $isLogin = false;
+	private $permission = 0;
 
     public function authenticate() {
-        $record = User::model()->findByAttributes(array('email' => $this->username));
+        $record = Users::model()->findByAttributes(array('email' => $this->username));
 
         if ($record === null) {
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
+			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		}
-        else if (!CPasswordHelper::verifyPassword($this->password,$record->password)) {
+		else if (md5($this->username.'+'.$this->password) != $record->public_key) {
 			$this->errorCode = self::ERROR_PASSWORD_INVALID;
 		}
-        else {
+        else {	
             $this->_id = $record->id;
-            $this->setState('title', '$record->title');
+			$this->isLogin = true;
+			$this->permission = $record->permission;
+			$this->setState('name', $record->email);
             $this->errorCode = self::ERROR_NONE;
         }
 
@@ -25,4 +29,8 @@ class UserIdentity extends CUserIdentity
 	public function getId() {
         return $this->_id;
     }
+
+	public function isAdmin() {
+		return $isLogin ? Yii::app()->user->permission == 1 : false;
+	}
 }
