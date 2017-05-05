@@ -46,9 +46,9 @@ return array(
 				'gii/<_c:\w+>/<_a:\w+>' => 'gii/<_c>/<_a>',
 
 				'<action:\w+>'=>'site/<action>',
-				//'controller:\w+>/<id:\d+>'=>'<controller>/view',
-				//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<action:\w+>/<id:\d+>'=>'site/<action>',
+				'<action:\w+>/<id:\d+>/<param:\w+>'=>'site/<action>',
+				'<action:\w+>/<param:\w+>'=>'site/<action>'
 			),
 		),
 		

@@ -1,4 +1,3 @@
-<?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,7 @@
 		<div class="container">
 			<h1>Общая библиотека</h1>
 			<nav>
-				<a href="">Домой</a>
-				<a href="">Архив</a>
+				<a href="<?php echo Yii::app()->createUrl('/'); ?>">Архив</a>
 				<a href="">Клиенты</a>
 				<a href="">Информация</a>
 				<a href="">Контакты</a>
@@ -34,10 +32,10 @@
 			<?php if (Yii::app()->user->isGuest): ?>
 				<a href="">Регистрация</a>
 			<?php else: ?>
-				<a href="">Корзина</a>
+				<a href="<?php echo Yii::app()->createUrl('/shoppingcart'); ?>">(<?php echo $this->getCountShoppingCart(); ?>) Корзина</a>
 				<div class="space"></div>
 				<span><?php echo Yii::app()->user->name; ?></span>
-				<a href="">Выход</a>
+				<a href="<?php echo Yii::app()->createUrl('/logout'); ?>">Выход</a>
 			<?php endif ?>
 			<?php if (Yii::app()->user->isGuest): ?>
 				<?php $form = $this->beginWidget('CActiveForm'); ?>
@@ -51,6 +49,13 @@
 
 	<section>
 		<div class="container">
+			<?php if (!empty($this->errors)): ?>
+				<div class="error-box">
+					<?php foreach ($this->errors as $error): ?>
+						<?php echo CHtml::tag('div', array(), $error); ?>
+					<?php endforeach ?>
+				</div>
+			<?php endif ?>
 			<?php echo $content; ?>
 		</div>
 	</section>

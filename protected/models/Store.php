@@ -1,21 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "books".
+ * This is the model class for table "store".
  *
- * The followings are the available columns in table 'books':
+ * The followings are the available columns in table 'store':
  * @property integer $id
- * @property string $label
- * @property string $author
+ * @property integer $book_id
+ * @property integer $library_id
+ * @property integer $count
  */
-class Books extends CActiveRecord
+class Store extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'books';
+		return 'store';
 	}
 
 	/**
@@ -26,11 +27,11 @@ class Books extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label, author', 'required'),
-			array('label, author', 'length', 'max'=>32),
+			array('book_id, library_id', 'required'),
+			array('book_id, library_id, count', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, label, author', 'safe', 'on'=>'search'),
+			array('id, book_id, library_id, count', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -42,7 +43,8 @@ class Books extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'store'=>array(self::BELONGS_TO, 'Store', 'id'),
+			// 'book'=>array(self::MANY_MANY, 'Books', 'book_id'),
+			'library'=>array(self::BELONGS_TO, 'Library', 'library_id'),
 		);
 	}
 
@@ -53,8 +55,9 @@ class Books extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'label' => 'Label',
-			'author' => 'Author',
+			'book_id' => 'Book',
+			'library_id' => 'Library',
+			'count' => 'Count',
 		);
 	}
 
@@ -77,8 +80,9 @@ class Books extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('label',$this->label,true);
-		$criteria->compare('author',$this->author,true);
+		$criteria->compare('book_id',$this->book_id);
+		$criteria->compare('library_id',$this->library_id);
+		$criteria->compare('count',$this->count);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,7 +93,7 @@ class Books extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Books the static model class
+	 * @return Store the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

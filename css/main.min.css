@@ -126,11 +126,153 @@ header nav .search form input[type=submit]:hover {
 .login-nav .container a:hover {
   background-color: #bdbdbd;
 }
+.error-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #eeeeee;
+  margin-top: 12px;
+  padding: 12px;
+  font-weight: 300;
+  font-size: 18px;
+}
+.error-box div {
+  padding: 12px;
+}
 .title {
   margin-top: 12px;
   font-size: 48px;
   font-weight: 300;
   padding: 18px;
+}
+.information {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 420px;
+  font-size: 34px;
+  font-weight: 300;
+}
+.information span {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+button {
+  padding: 10px;
+  background-color: #757575;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #424242;
+}
+.admin-toolbar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  margin-top: 12px;
+}
+.admin-toolbar a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #757575;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.admin-toolbar a:hover {
+  background-color: #424242;
+}
+.book-page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.book-page .label {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  font-weight: 400;
+  font-size: 26px;
+}
+.book-page .label .author {
+  font-weight: 500;
+}
+.book-page img {
+  width: 200px;
+  height: 200px;
+}
+.book-page .empty {
+  -ms-flex: 1;
+      flex: 1;
+  height: 220px;
+  font-size: 32px;
+  font-weight: 300;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.book-page .disc {
+  padding: 12px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.book-page .disc .info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 0 12px;
+}
+.book-page .disc .info .done {
+  margin-top: 12px;
+  font-size: 18px;
+}
+.book-page .pay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.book-page .pay a {
+  padding: 10px;
+  background-color: #757575;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.book-page .pay a:hover {
+  background-color: #424242;
+}
+.book-page .pay .space {
+  -ms-flex: 1;
+      flex: 1;
 }
 .card-box {
   display: -ms-flexbox;
@@ -231,7 +373,8 @@ header nav .search form input[type=submit]:hover {
   font-weight: 300;
   font-size: 18px;
 }
-.form-page .form-box input {
+.form-page .form-box input,
+.form-page .form-box select {
   -ms-flex: 2;
       flex: 2;
   padding: 12px;

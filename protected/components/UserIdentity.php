@@ -19,7 +19,10 @@ class UserIdentity extends CUserIdentity
             $this->_id = $record->id;
 			$this->isLogin = true;
 			$this->permission = $record->permission;
+
 			$this->setState('name', $record->email);
+			$this->setState('permission', $this->isAdmin());
+			
             $this->errorCode = self::ERROR_NONE;
         }
 
@@ -31,6 +34,6 @@ class UserIdentity extends CUserIdentity
     }
 
 	public function isAdmin() {
-		return $isLogin ? Yii::app()->user->permission == 1 : false;
+		return $this->isLogin ? $this->permission == 1 : false;
 	}
 }
